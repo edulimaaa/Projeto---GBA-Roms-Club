@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Icone/Sykonist-Console-Gameboy-Advance-purple.ico" type="image/x-icon">
+    <title>GBA Roms Club Brasil &copy;</title>
+    <style>
+        body {
+            background-color:thistle;
+            margin: 0;
+           
+        }
+        #foto {
+            margin: auto;
+            background-color: #413473;
+        }
+        
+        #fotoinicio {
+            width: 100%;  
+        }
+        
+        .dp-menu ul {
+            list-style-type: none; /*tira as bolinhas da lista*/
+             /*alinha toda listra no canto*/
+           
+        }
+        .dp-menu ul {
+            background-color: #413473;
+            padding: 15px;
+            margin: 0;
+            text-align: center;
+            
+            
+        }
+        .dp-menu ul li {
+            display: inline;
+            position: relative;
+           
+        }
+        .dp-menu ul li a {  
+            color: rgb(255, 255, 255);
+            text-decoration: none; /*tira o sublinhado dos nomes da lista*/
+            padding: 15px;
+            transition: background .2s;
+        }
+        .dp-menu ul li a:hover {
+            background-color: #6b1fd6;
+            border-radius: 5px 5px 5px;   
+        }
+        /*-----------------SUB MENU-----------------*/
+        .dp-menu ul ul {
+            display: none; /*fazer os sub menus entrarem nos seus pais*/
+            position: absolute;
+            width: 130px;
+            left: 0;
+            margin-top: 15px; /*descer para alinha os submenus*/
+            text-align: left;
+            
+        }
+        .dp-menu ul li:hover ul { 
+            display: block;
+            
+        }
+        
+        .dp-menu ul ul li a {
+            display: block;
+            
+        }
+
+        /*------------------ Postagens ------------------*/
+        .post {
+            display: flex;
+            flex-direction: column; 
+        }
+
+        .rom {
+            border-radius: 18px;
+            box-shadow: 2px 2px 15px black;
+            text-align: center;
+            background-color: rgb(245, 245, 245);
+            width: 850px;
+            height: 680px;
+            margin: 29px auto;
+            
+        }
+
+        .capa {
+            width: 5cm;
+            height: 5cm;
+        }
+
+        .previa {
+            width: 7cm;
+            height: 5cm;
+            margin-left: 15px;
+        }
+
+        .sinopse {
+            text-align: justify; 
+            margin-left: 227px; 
+            width: 400px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+     
+    <div id="foto">
+        <header>
+            <img id="fotoinicio" src="Imagens/imginicial.jpg" alt="Game Boy Advanced">
+        </header>
+    </div>
+        
+    <div class="dp-menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+
+                <li><a href="#">Categorias</a>
+                    <ul>
+                        <li><a href="#Aventura">Aventura</a></li>
+                        <li><a href="#">Estratégia</a></li>
+                        <li><a href="#">Esporte</a></li>
+                        <li><a href="#">Plataforma</a></li>
+                    </ul>
+                </li>
+                
+                <li><a href="#">Lista A-Z</a>
+                    <ul>
+                        <li><a href="#">1-9</a></li>
+                        <li><a href="#">A</a></li>
+                        <li><a href="#">B</a></li>
+                        <li><a href="#">C</a></li>
+                        <li><a href="#">D</a></li>
+                        <li><a href="#">E</a></li>
+                    </ul>
+                </li>
+                
+                <li><a href="#">Mais Baixados</a></li>
+            </ul>
+    </div>
+    <div class="post">
+        <div id="Aventura" class="rom">
+            <br>
+            <h3>2 in 1 – Asterix and Obelix XXL (Português BR)</h3>
+            <img class="capa" src="Imagens/Capa Jogos/Asterix and Obelix XXL.jpg" alt="Asterix and Obelix XXL">
+            <img class="previa" src="Imagens/Previas Jogos/Asterix and Obelix XXL-min.gif" alt="Asterix and Obelix XXL - Download">
+            <br>
+            <p class="sinopse"><strong>Sinopse:</strong> É um videogame de ação-aventura lançado em 2004. É baseado na série de quadrinhos franco-belga Asterix. Foi produzido para computador, PlayStation 2, GameCube e Game Boy Advance. Teve uma sequência lançada em 2005, Asterix & Obelix XXL 2: Mission Las Vegum.</p>
+            <p><strong>Gênero:</strong> Aventura</p>
+            <p><strong>Tamanho:</strong> 16.0 MB</p>
+            <br>
+            <a href=""><img src="Imagens/tec260x59.png" alt="Download"></a>
+        </div>
+        <div id="Estratégia" class="rom">
+            <br>
+            <h3>Advance Wars (Português BR)</h3>
+            <img class="capa" src="Imagens/Capa Jogos/Advance Wars.jpg" alt="Advance Wars">
+            <img class="previa" src="Imagens/Previas Jogos/Advance Wars.gif" alt="Advance Wars - Download">
+            <br>
+            <p class="sinopse"><strong>Sinopse:</strong> É um jogo de estratégia militar por turnos, desenvolvido para o Game Boy Advance pela Intelligent Systems e publicado pela Nintendo em 2001. Ele iria estrear no dia 9 de setembro de 2001, mas só saiu nos Estados Unidos no dia 25 de Novembro de 2005, devido aos ataques terroristas de 11 de setembro.</p>
+            <p><strong>Gênero:</strong> Estratégia</p>
+            <p><strong>Tamanho:</strong> 4.0 MB</p>
+            <br>
+            <a href=""><img src="Imagens/tec260x59.png" alt="Download"></a>
+        </div>
+        <div class="rom">
+            <br>
+            <h3>Advance Wars 2 – Black Hole Rising (Português BR)</h3>
+            <img class="capa" src="Imagens/Capa Jogos/Advance Wars 2 – Black Hole Rising.jpg" alt="Advance Wars 2 – Black Hole Rising">
+            <img class="previa" src="Imagens/Previas Jogos/Advance Wars 2 Black Hole Rising.webp" alt="Advance Wars 2 – Black Hole Rising - Download">
+            <br>
+            <p class="sinopse"><strong>Sinopse:</strong> É um jogo de estratégia em turnos produzido pela Intelligent Systems e publicado pela Nintendo para o Game Boy Advance. É a sequência de Advance Wars, também para o Game Boy Advance. Nenhum foi lançado na data oficial do Japão por causa dos ataques terroristas de 11 de setembro. Foi mais tarde lançado em 2004 junto com o primeiro jogo como Game Boy Wars Advance 1+2.</p>
+            <p><strong>Gênero:</strong> Estratégia</p>
+            <p><strong>Tamanho:</strong> 8.0 MB</p>
+            <br>
+            <a href=""><img src="Imagens/tec260x59.png" alt="Download"></a>
+        </div>
+        <div class="rom">
+            <br>
+            <h3>Agent Hugo Roborumble (Português BR)</h3>
+            <img class="capa" src="Imagens/Capa Jogos/Agent Hugo Roborumble .jpg" alt="Agent Hugo Roborumble">
+            <img class="previa" src="Imagens/Previas Jogos/Agent Hugo Roborumble.gif" alt="Agent Hugo Roborumble - Download">
+            <br>
+            <p class="sinopse"><strong>Sinopse:</strong> É um videogame de corrida desenvolvido e publicado pela ITE Media, lançado em 2006 para Windows, PlayStation 2, Game Boy Advance e telefones celulares. Faz parte da franquia Hugo. Este é o segundo episódio da série Agent Hugo.</p>
+            <p><strong>Gênero:</strong> Plataforma</p>
+            <p><strong>Tamanho:</strong> 4.0 MB</p>
+            <br>
+            <a href=""><img src="Imagens/tec260x59.png" alt="Download"></a>
+        </div>
+        <div class="rom">
+            <br>
+            <h3>Aggressive Inline (Português BR)</h3>
+            <img class="capa" src="Imagens/Capa Jogos/Aggressive Inline.jpg" alt="Aggressive Inline">
+            <img class="previa" src="Imagens/Previas Jogos/Aggressive Inline.gif" alt="Aggressive Inline - Download">
+            <br>
+            <p class="sinopse"><strong>Sinopse:</strong> É um videogame de esportes de 2002 desenvolvido pela Z-Axis, publicado pela Acclaim Entertainment sob seu rótulo AKA Acclaim, e lançado para PlayStation 2, Xbox e GameCube. O jogo apresenta patinadores profissionais inline, incluindo Chris Edwards, Eito Yasutoko, Franky Morales, Jaren Grob e Taïg Khris. Um jogo diferente com o mesmo nome foi desenvolvido pela Full Fat e lançado para o Game Boy Advance.</p>
+            <p><strong>Gênero:</strong> Esporte</p>
+            <p><strong>Tamanho:</strong> 8.0 MB</p>
+            <br>
+            <a href=""><img src="Imagens/tec260x59.png" alt="Download"></a>
+        </div>
+    </div>
+    
+</body>
+</html>
