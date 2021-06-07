@@ -1,67 +1,222 @@
 body {
-    background-color:thistle;
+    background-color: thistle;
     margin: 0;
-   
+    padding: 0px;
 }
-#foto {
-    margin: auto;
-    background-color: #413473;
+
+#fotoinicio > img {
+    width: 100%; /*Fazer imagem ocupar 100% de largura da página*/ 
 }
 
 #fotoinicio {
-    width: 100%;  
+    background-color: #413473; /*Tira um pequeno espaço entre div*/
 }
 
-.dp-menu ul {
-    list-style-type: none; /*tira as bolinhas da lista*/
-     /*alinha toda listra no canto*/
-   
+a {
+    color: black;
+    text-decoration: none; /*Tira sublinhado de link lista*/
+    font-family: sans-serif;
 }
-.dp-menu ul {
-    background-color: #413473;
-    padding: 15px;
-    margin: 0;
-    text-align: center;
-    
-    
-}
-.dp-menu ul li {
-    display: inline;
-    position: relative;
-    font-size: 22px;
-   
-}
-.dp-menu ul li a {  
-    color: rgb(255, 255, 255);
-    text-decoration: none; /*tira o sublinhado dos nomes da lista*/
-    padding: 15px;
-    transition: background .2s;
-}
-.dp-menu ul li a:hover {
+
+a:hover {
     background-color: #6b1fd6;
-    border-radius: 5px 5px 5px;   
+    border-radius: 20px;
 }
-/*-----------------SUB MENU-----------------*/
-.dp-menu ul ul {
-    display: none; /*fazer os sub menus entrarem nos seus pais*/
-    position: absolute;
-    width: 130px;
-    left: 0;
-    margin-top: 15px; /*descer para alinha os submenus*/
-    text-align: left;
-    
+
+#header {
+    font-size: 20px;
+    display: flex; /*Colocar itens lado a lado*/
+    background: #413473;
+    height: 67px;
 }
-.dp-menu ul li:hover ul { 
-    display: block;
+
+#menu {
+    display: flex; /*Colocar itens lado a lado*/
+    list-style: none; /* tira as bolinhas dos menus*/
+    gap: 20px; /*Fazer espaço entre os nomes menus*/
     
 }
 
-.dp-menu ul ul li a {
-    display: block;
-    
+#menu a {
+    color: white;
+    padding: 20px;
 }
 
-/*------------------ Postagens ------------------*/
+#btn-mobile {
+    display: none;
+}
+
+
+#pesquisa {
+    margin-right: 40px;
+}
+
+
+/*------- BLOCO RESPONSIVE -------*/
+@media (max-width: 850px) {
+    .rom {
+        width: 90% !important;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .rom {
+        height: 490px !important;
+    }
+    .sinopse {
+        display: none; /*Tira as sinopse*/
+    }
+}
+
+@media (max-width: 524px) {
+   #menu a {
+    width: 100% !important;  
+   }
+   .rom {
+       width: 95% !important;
+       height: 500px !important;
+   }
+} 
+
+@media (max-width: 496px) {
+    .rom {
+        height: 670px !important;
+    }
+}
+/*---------- FIM RESPONSIVE ----------*/
+
+/*-----------INICIO MENU ESTILO MOBILE ------------*/
+@media (max-width: 675px) {
+    #nav.active #menu {
+        transition: .7s;
+        display: block; /*Mostra menu em coluna*/
+        visibility: visible; /*Mostra menu*/
+        background: #413473;
+        height: 233px; /*Tamanho do fundo menu*/
+    } 
+
+    #menu {
+        visibility: hidden; /*Esconder menu*/
+        overflow-y: auto; /*Esconder menu p/ aparecer depois do clique*/
+        position: absolute; /*Ficar por cima de qualquer elemento*/
+        width: 100%;
+        right: 0;
+        top: auto;
+        margin: 0;
+        background: #413473;
+        height: 0px;
+    }
+
+    #menu a {
+        text-align: center;
+        display: block;
+        padding: 1rem 0;
+        margin: 0;
+        border-bottom: 2px solid rgb(97, 97, 97);
+    }
+
+    #btn-mobile {
+        color: white;
+        margin-top: 12px;
+        display: flex; /*Abaixo de 600px aparece o menu*/
+        padding: .5rem 1rem;
+        font-size: 20px; 
+        border: none;
+        background: none;
+        cursor: pointer; /*Ao passar o mouser muda cursor p/ mão clique*/
+        gap: 1rem;
+    }
+
+    #hamburguer { /*Criando menu hamburguer*/
+        margin-top: 5px;
+        color: white;
+        display: block;
+        width: 20px;
+        border-top: 2px solid;
+    }
+
+    #hamburguer::after, #hamburguer::before {
+        content: ''; /*Ira criar a primeira linha do menu hamburguer*/
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: currentColor; /*Usar a cor do pai hamburger*/
+        margin-top: 5px;
+        transition: .3s;
+        position: relative; /*Precisa p/ fazer animação de x*/
+    }
+
+    #nav.active #hamburguer {
+        border-top-color: transparent; /*Ao clicar ira sumir uma barra no menu hamburguer*/
+    }
+
+    #nav.active #hamburguer::before {
+        transform: rotate(135deg); /*Rodar menu em x*/
+    }
+
+    #nav.active #hamburguer::after {
+        transform: rotate(-135deg);
+        top: -7px; /*Usar com o position: relative*/
+    }
+
+    .dp-menu ul ul li {
+        display: none; /*Tira o sub-menu categorico*/
+    }
+}
+/*--------FIM MENU ESTILO MOBILE--------------*/ 
+
+
+/*----------SUB MENU INICIO------------*/
+@media (min-width: 675px) {
+    .dp-menu ul {
+        list-style-type: none;
+        padding: 19px;
+        margin: 0;
+        text-align: center;
+    }
+
+    .dp-menu ul ul {
+        display: none; /*fazer os sub menus entrarem nos seus pais*/
+        position: absolute;
+        width: 130px;
+        left: 111px;
+        margin-top: 22px;
+    }
+
+    .dp-menu {
+        display: flex;
+        position: relative;
+        list-style-type: none;
+    }
+
+    .dp-menu ul li a {   
+        transition: .5s;
+    }
+
+    .dp-menu ul li:hover ul { 
+        display: block;
+        background-color: #413473;
+        border-radius: 5px;
+    }
+
+    .dp-menu ul ul li a {
+        display: block;
+    }
+}
+/*-----------SUB MENU FIM------------*/
+
+
+
+
+
+
+
+
+
+
+
+/*------------------ Postagens INICIO------------------*/
 .post {
     display: flex;
     flex-direction: column; 
@@ -72,8 +227,8 @@ body {
     box-shadow: 2px 2px 15px black;
     text-align: center;
     background-color: rgb(245, 245, 245);
-    width: 750px;
-    height: 680px;
+    width: 65%;
+    height: 100%;
     margin: 29px auto;
 }
 
@@ -89,9 +244,9 @@ body {
 }
 
 .sinopse {
+    padding: 50px;
     font-size: 17px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-align: justify; 
-    margin-left: 180px; 
-    width: 400px;
 }
+/*--------------- Postagens FIM ----------------*/
